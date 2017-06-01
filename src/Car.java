@@ -6,6 +6,14 @@ public class Car extends Vehicle {
 	private int speed;
 	
 
+	public Car(String aColor, String aManufacturer)
+	{
+		super( aColor,  aManufacturer);
+		speed=0;
+		model="car";
+		start=false;
+	}
+	
 	public Car(String aColor, String aManufacturer, String aModel) {
 		super(aColor, aManufacturer);
 		model=aModel;
