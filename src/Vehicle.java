@@ -32,5 +32,11 @@ public abstract class Vehicle {
 		color=newC;
 		
 	}
+	
+	public abstract String accelerate(int newSpeed);
+	
+	public abstract void run();
+	
+	public abstract void stop();
 
 }
