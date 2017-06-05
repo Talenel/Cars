@@ -6,6 +6,7 @@ public class Boat extends Vehicle {
 	private int speed;
 	private boolean floating;
 	private boolean docked;
+	private Captain captain;
 	
 	
 	
@@ -14,6 +15,14 @@ public class Boat extends Vehicle {
 		type=aType;
 		speed=0;
 		start=false;
+		// TODO Auto-generated constructor stub
+	}
+	public Boat(String aColor, String aManufacturer,String aType, Captain aCaptain) {
+		super(aColor, aManufacturer);
+		type=aType;
+		speed=0;
+		start=false;
+		captain=aCaptain;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -140,6 +149,13 @@ public class Boat extends Vehicle {
 		{
 			return "The "+ this.getColor()+" "+ type +" isn't started yet!";
 		}
+	}
+
+	@Override
+	public String getOperator() {
+		// TODO Auto-generated method stub
+		
+		return "The captain of the boat is "+captain.getName();
 	}
 	
 

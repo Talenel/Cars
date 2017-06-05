@@ -5,14 +5,15 @@ public class Plane extends Vehicle {
 	private boolean start;
 	private int speed;
 	private boolean flying;
+	private Pilot pilot;
 	
-	
-	public Plane(String aColor, String aManufacturer, String aModel) {
+	public Plane(String aColor, String aManufacturer, String aModel, Pilot aPilot) {
 		super(aColor, aManufacturer);
 		model=aModel;
 		speed=0;
 		start=false;
 		flying=false;
+		pilot=aPilot;
 		
 		// TODO Auto-generated constructor stub
 	}
@@ -173,6 +174,12 @@ public class Plane extends Vehicle {
 		brake(0);
 		
 		
+	}
+	@Override
+	public String getOperator() {
+		// 
+		
+		return "The pilto of the plane is "+pilot.getName();
 	}
 
 }

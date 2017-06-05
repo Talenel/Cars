@@ -4,14 +4,15 @@ public class Car extends Vehicle {
 	private String model;
 	private boolean start;
 	private int speed;
-	
+	private Driver driver;
 
-	public Car(String aColor, String aManufacturer)
+	public Car(String aColor, String aManufacturer, Driver aDriver)
 	{
 		super( aColor,  aManufacturer);
 		speed=0;
 		model="car";
 		start=false;
+		driver=aDriver;
 	}
 	
 	public Car(String aColor, String aManufacturer, String aModel) {
@@ -109,6 +110,12 @@ public class Car extends Vehicle {
 		brake(0);
 		
 		
+	}
+
+	@Override
+	public String getOperator() {
+		// TODO Auto-generated method stub
+		return "The driver of the car is "+driver.getName();
 	}
 	
 	
